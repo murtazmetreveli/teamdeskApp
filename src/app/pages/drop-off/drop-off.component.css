@@ -1,0 +1,49 @@
+ion-modal#example-modal {
+  --width: fit-content;
+  --min-width: 250px;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+ion-modal#example-modal .wrapper {
+  margin-bottom: 10px;
+}
+ion-list ion-button {
+  margin-top: 10px;
+  color: var(--ion-text-green) !important;
+}
+ion-modal ion-toolbar {
+  --background: transparent;
+  --color: var(--ion-search-placeholder-color);
+}
+
+::ng-deep .close {
+  width: 98% !important;
+  height: 25pt;
+  position: fixed;
+  left: 0;
+  bottom: 1px;
+  right: 0;
+  --border-radius: 6.67pt;
+  --border-color: var(--ion-text-green);
+  --border-width: 1px;
+}
+.custom-alert {
+  /* background-color: var(--ion-text-green); Set the background color */
+  border: 2px solid #ccc; /* Set the border */
+  border-radius: 10px; /* Set the border radius */
+  color: var(--ion-text-green); /* Set the text color */
+}
+::ng-deep .alert-button-inner {
+  color: #ffffff !important; /* Set the text color */
+}
+
+::ng-deep .alert-wrapper {
+  --background: var(--ion-text-green) !important;
+  color: #ffffff !important;
+}
+::ng-deep .custom-alert .alert-message {
+  color: #ffffff !important;
+}
+/* Works - pass "my-custom-class" in cssClass to increase specificity */

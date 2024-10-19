@@ -1,0 +1,69 @@
+<ion-header class="ion-no-border" mode="md">
+  <app-sub-header (collectionSearch)="someMethod($event)" [collectionData]="sendCollectionData" [headerObj]="headerData"
+    class="sticky-header"> </app-sub-header>
+  <ion-col size="12">
+    <ion-searchbar [(ngModel)]="searchQuery" (keyup)="onSearch()"></ion-searchbar>
+  </ion-col>
+</ion-header>
+<ion-content class="ion-padding sentbox" [fullscreen]="false" [scrollEvents]="true">
+  <ion-header class="ion-no-border"></ion-header>
+  <ion-segment mode="ios" [value]="selectedSegment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button [value]="0">
+      <ion-label>Lab-Check-In</ion-label>
+    </ion-segment-button>
+    <ion-segment-button [value]="1">
+      <ion-label>Collection</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ng-container>
+    <swiper-container #swiper (swiperslidechange)="slideChanged()">
+      <swiper-slide>
+        <ion-grid>
+          <ion-row class="sentbox-details"
+            *ngFor="let dropOFFData of (searchQuery ? filterDropOFFData : sendDropOFFData)">
+            <ion-col size="10" class="ion-margin-top">
+              <h5>{{ dropOFFData['Lab QR Code']||'' }}</h5>
+              <!-- <ion-text>{{ collectionData['Status']||'' }}</ion-text> -->
+              <p>Delivered at
+                {{ dropOFFData['Date/Time'] }},
+                {{ dropOFFData['Details']||'no additional details' }}
+              </p>
+            </ion-col>
+            <ion-col size="2" class="ion-text-center ion-align-self-center">
+              <ion-img width="50" height="50" *ngIf="dropOFFData['Image Upload']"
+                src="{{ dropOFFData['Image Upload'] }}"
+                (click)="openImageModal(dropOFFData['Image Upload'])" ionError="this.src='assets/images/no_image.png'">
+              </ion-img>
+              <span *ngIf="!dropOFFData['Image Upload']">no image</span>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-grid>
+          <ion-row class="sentbox-details"
+            *ngFor="let collectionData of (searchQuery ? filteredCollectionData : sendCollectionData)">
+            <ion-col size="10">
+
+              <h5>{{ collectionData['Practice Name']||'' }}</h5>
+              <ion-text>{{ collectionData['Status']||'' }}</ion-text>
+              <p>Collected at
+                {{ collectionData['Date/Time Collected'] }},
+                {{ collectionData['Details']||'no additional details' }}
+              </p>
+            </ion-col>
+            <ion-col size="2" class="ion-text-center ion-align-self-center">
+              <ion-img width="50" height="50" *ngIf="collectionData['Photo']"
+                src="{{ collectionData['Photo'] }}"
+                (click)="openImageModal(collectionData['Photo'])" ionError="this.src='assets/images/no_image.png'">
+              </ion-img>
+              <span *ngIf="!collectionData['Photo']">no image</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </swiper-slide>
+    </swiper-container>
+  </ng-container>
+</ion-content>

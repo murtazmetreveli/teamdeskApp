@@ -1,0 +1,78 @@
+  ion-header {
+    // background-color: var(--app-bg-color);
+
+  }
+
+  .banner {
+    background-color: var(--app-bg-color);
+    padding-top: 16pt;
+    margin-top: 15pt;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    padding: 8px 24pt;
+    --height: min-height;
+
+    .search-back-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        font-size: 18.67pt;
+        padding-bottom: 0px;
+        color: var(--ion-text-color);
+      }
+
+      ion-text {
+        font-size: 16.33pt;
+        color: var(--ion-text-color);
+      }
+    }
+
+    .search-not-header {
+      h4 {
+        font-size: 21.33pt;
+        padding-bottom: 0px;
+        margin-bottom: 20pt;
+        color: var(--ion-text-color);
+      }
+
+      span {
+        // margin-top:16pt;
+        width: 193pt;
+        height: 34pt;
+        padding: 10pt;
+        font-size: 12pt;
+        font-weight: 500;
+        background-color: var(--app-bg-color);
+        color: var(--ion-text-color);
+        border-radius: 10px;
+        border: 10px;
+        background-color: #3cd2a5;
+      }
+    }
+
+    ion-searchbar {
+      --placeholder-color: var(--ion-search-placeholder-color);
+      --border-radius: 10px;
+      --box-shadow: none;
+    }
+
+
+
+  }
+
+  ::ng-deep .alertControl {
+    // color: black;
+    --background: var(--ion-text-green);
+
+  }
+
+  ::ng-deep .alert-button-group>button {
+    color: #fff !important;
+  }
+
+  .font-green {
+    color: var(--ion-text-green) !important;
+  }

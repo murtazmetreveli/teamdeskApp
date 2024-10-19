@@ -1,0 +1,74 @@
+.pt-28 {
+    --padding-top: 28pt;
+
+}
+
+
+.enter-details {
+
+
+
+    ion-textarea {
+        margin-top: 22pt;
+        --background: var(--app-bg-color);
+        --border-color: #BBBBBB;
+        --placeholder-color: var(--ion-font-gray-dark);
+        height: 230pt;
+        border-radius: 10px;
+        font-size: 10.33pt;
+        --border-width: 2.9px;
+        --border-radius: 10px;
+    }
+
+    ion-button {
+        width: 50%;
+    }
+
+}
+
+::ng-deep .spinner {
+    --backdrop-opacity: 0;
+    box-shadow: none !important;
+    --spinner-color: var(--ion-text-green);
+    --height: 80px !important;
+    --width: 80px !important;
+}
+
+::ng-deep .loading-wrapper.sc-ion-loading-md,
+.sc-ion-loading-ios {
+    --background: transparent !important;
+    -webkit-box-shadow: none !important;
+
+}
+
+::ng-deep .textarea-wrapper .sc-ion-textarea-ios {
+    border: 1px solid #bbbbbb !important;
+    border-radius: 10px !important;
+
+}
+
+::ng-deep .native-wrapper.sc-ion-textarea-ios textarea.sc-ion-textarea-ios {
+    padding-left: 10px !important;
+}
+
+
+::ng-deep .alert-button-group>button {
+    color: #fff !important;
+}
+
+// ::ng-deep.alert-button.sc-ion-alert-ios {
+//     --background: var(--ion-text-green) !important;
+
+// }
+
+::ng-deep.alert-wrapper.sc-ion-alert-ios {
+    background: var(--ion-text-green) !important;
+}
+
+::ng-deep.my-custom-class .alert-message {
+    color: #fff !important;
+}
+
+::ng-deep.alert-button.sc-ion-alert-ios {
+    font-size: 15px;
+}

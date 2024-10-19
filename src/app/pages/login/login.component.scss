@@ -1,0 +1,97 @@
+ion-content {
+  .card-container {
+    // max-width: max-content;
+    // margin: 0 auto;
+    // position: relative;
+    // flex: 1;
+    // transform:translate(0,50%);
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 48px;
+      color: var(--ion-text-green);
+      text-align: center;
+
+      span {
+        font-size: 48px;
+
+        color: var(--ion-text-color);
+
+      }
+
+      margin-top: 63.7px !important;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      margin-top: 81.33px;
+      margin-bottom: 52px;
+      font-size: 28px;
+
+      text-align: center;
+      color: var(---ion-text-color);
+      font-weight: normal;
+    }
+
+    ion-button {
+      margin-top: 61.1px;
+      height: 44px;
+    }
+
+    ion-text {
+      color: #808080;
+      font-size: 12px;
+
+    }
+
+    ion-input {
+      --highlight-color-focused: var(--ion-text-green);
+      --border-color: var(--ion-text-green);
+    }
+
+    .form {
+      margin-top: 26px;
+    }
+
+    .last-section {
+      position: fixed;
+      left: 0;
+      bottom: 10px;
+      right: 0;
+    }
+  }
+
+
+  img {
+    margin-top: 10px;
+    width: 85pt;
+    height: auto;
+  }
+}
+
+::ng-deep .alertControl {
+  // color: black;
+  --background: var(--app-bg-color);
+  color: rgb(209, 73, 73);
+
+  ::ng-deep .alert-button-group>button {
+    color: #e31a1a !important;
+  }
+
+  ::ng-deep .alert-message {
+    color: #e31a1a !important;
+
+  }
+
+  ::ng-deep .alert-title {
+    color: #e31a1a !important;
+  }
+
+  ::ng-deep .alert-wrapper.sc-ion-alert-ios {
+    border: 2px solid var(--ion-text-green);
+    z-index: 0;
+
+  }
+}

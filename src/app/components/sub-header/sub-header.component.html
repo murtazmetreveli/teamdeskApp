@@ -1,0 +1,17 @@
+  <ion-row class="banner" *ngIf="headerObj" mode="md">
+    <ion-col size="1" class="search-back-header" *ngIf="headerObj?.backButton">
+      <ion-button fill="clear" (click)="goToHome()">Back</ion-button>
+    </ion-col>
+    <ion-col size="11" class="search-back-header ion-text-center" *ngIf="headerObj?.serach">
+      <h4 [ngClass]="{'font-green':dropOff}">{{ headerObj?.title }}</h4>
+      <ion-text *ngIf="headerObj?.sub_title && dropOff" class="text-title">{{ headerObj?.sub_title }}</ion-text>
+
+    </ion-col>
+    <ion-col size="12" class="ion-text-center search-not-header" *ngIf="!headerObj?.serach">
+      <h4 [ngClass]="{'font-green':dropOff}">{{ headerObj?.title }}</h4>
+      <ion-text *ngIf="headerObj?.sub_title && dropOff" class="text-title">{{ headerObj?.sub_title }}</ion-text>
+
+      <span (click)="goToDrop()" *ngIf="headerObj?.button_text && !dropOff">{{ headerObj?.button_text }}</span>
+    </ion-col>
+
+  </ion-row>

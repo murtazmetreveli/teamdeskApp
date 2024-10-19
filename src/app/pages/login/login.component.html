@@ -1,0 +1,28 @@
+<ion-content class="ion-padding">
+  <div class="card-container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-row>
+        <ion-col class="12">
+          <h1>COURIER<br><span>CONTROL</span></h1>
+          <h2>Sign in</h2>
+        </ion-col>
+        <ion-col size="12">
+          <ion-input type="email" placeholder="Email" name="email" formControlName="email"> </ion-input>
+
+        </ion-col>
+        <ion-col size="12" class="form">
+          <ion-input type="password" placeholder="Password" name="password" formControlName="password"></ion-input>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+          <ion-button expand="block" type="submit"> Sign in </ion-button>
+          <ion-text>Forgot password?</ion-text>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+  <ion-row>
+    <ion-col size="12" class="last-section ion-text-center">
+      <img src="assets/icon/logo.png" />
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Image Preview</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()" class="close-button">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content-center ion-padding" [fullscreen]="true">
+  <ion-img class="custom-image" [src]="imageUrl"></ion-img>
+</ion-content>

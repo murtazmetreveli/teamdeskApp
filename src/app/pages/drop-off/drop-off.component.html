@@ -1,0 +1,6 @@
+<ion-content class="ion-padding outbox" [fullscreen]="false" [scrollEvents]="true">
+    <app-sub-header [headerObj]="headerData"> </app-sub-header>
+    <ion-button expand="block" (click)="scan()" [disabled]="!isSupported">Scan</ion-button>
+</ion-content>
+<ion-alert [isOpen]="isAlertOpen" class="custom-alert" message="Barcode Successfully Scanned.!" mode="ios"
+    [buttons]="alertButtons" (didDismiss)="setOpen(false)" (click)="done()"></ion-alert>

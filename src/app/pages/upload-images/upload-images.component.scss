@@ -1,0 +1,55 @@
+.pt-39 {
+    --padding-top: 39pt;
+
+}
+
+
+
+.upload-image {
+
+    .uploads {
+        .flex {
+
+            width: 117pt;
+            height: 117pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 117pt;
+            height: 110pt;
+            background: var(--ion-light-gray-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+
+            ion-img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        margin-top: 32pt;
+
+        .plus {
+            color: var(--ion-text-color-sky);
+            font-size: 66pt;
+            border: 1px solid;
+            border-radius: 50%;
+
+        }
+    }
+
+    .up-btn {
+        ion-button {
+            position: fixed;
+            left: 0;
+            bottom: 5%;
+            right: 0;
+            margin: 0 10px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<!-- <ion-content> -->
+<!-- <swiper-container [modules]="swiperModules" [slidesPerView]="1" [loop]="true" [pagination]="true">
+  <swiper-slide>
+    <ion-row class="outbox-details ">
+      <ion-col size="12" class="ion-margin-top" *ngFor="let d of sliderData">
+        <h5>{{ d?.practiceId }}</h5>
+        <ion-text>{{ d?.Status }}</ion-text>
+        <p>{{ d?.details||'no additional details' }}</p>
+      </ion-col>
+    </ion-row>
+  </swiper-slide>
+  <swiper-slide>
+  </swiper-slide>
+  <swiper-slide>
+  </swiper-slide>
+</swiper-container> -->
+<swiper-container [modules]="swiperModules" [slidesPerView]="1" [loop]="true" [pagination]="true" *ngIf="number"
+  (slidechange)="swiperSlideChanged($event)">
+  {{ number }}||||
+  <swiper-slide *ngFor="let chunk of sliderData | slice:0:5; let i = index" get-value="{{ i }}">-----{{ i }}*****
+    <ion-row class="outbox-details" *ngFor="let d of chunk">
+      <ion-col size=" 12" class="ion-margin-top">
+        <h5>{{ d.practiceId }}</h5>
+        <ion-text>{{ d.Status }}</ion-text>
+        <p>{{ d.details || 'no additional details' }}</p>
+      </ion-col>
+    </ion-row>
+  </swiper-slide>
+</swiper-container>
+
+<!-- </ion-content> -->

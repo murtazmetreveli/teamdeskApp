@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+
+  <app-sub-header [headerObj]="headerData"> </app-sub-header>
+</ion-header>
+<ion-content class="ion-padding upload-image " [ngClass]="{'pt-39':!dropOff}" [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="upload-title" *ngIf="!dropOff">
+      <ion-col class="ion-text-center" size="12">
+        <ion-text class="text-title">Please upload images, then click done</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="uploads">
+      <ion-col size="4" (click)="uploadPhoto()" class="ion-text-center flex">
+        <div class="box">
+          <img src="assets/icon/plus.png" onerror="this.src='assets/images/default.png'" />
+        </div>
+      </ion-col>
+      <ion-col size="4" class="ion-text-center flex" *ngFor="let photo of photos; index as position">
+        <div class="box">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="up-btn  ion-padding">
+
+      <ion-col size="12" class="ion-text-center" mode="md">
+        <ion-button (click)="done()" [disabled]="uploadImage">Done </ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

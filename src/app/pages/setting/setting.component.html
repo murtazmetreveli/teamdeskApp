@@ -1,0 +1,55 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <app-header [headerObj]="headerObject"></app-header>
+  <ion-grid>
+    <ion-row class="setting">
+      <ion-col size="12" class="ion-text-center">
+        <h1 *ngIf="platform.is('android')">Settings</h1>
+        <h1 (click)="openAppSetting()" *ngIf="!platform.is('android')">Settings Update</h1>
+      </ion-col>
+    </ion-row>
+    <div class="setting-section">
+      <ion-row class="mt-21" *ngIf="platform.is('android')">
+        <ion-col size="2" class="icon">
+          <ion-icon name="notifications" class="icon-notification"></ion-icon>
+        </ion-col>
+        <ion-col size="8" class="setting-details">
+          <h5>Notifications</h5>
+        </ion-col>
+        <ion-col size="2" class="icon-always">
+
+          <ion-toggle [(ngModel)]="notificationEnabled" (ionChange)="notificationStatus()"></ion-toggle>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mt-21" *ngIf="platform.is('android')">
+        <ion-col size="2" class="icon">
+          <ion-icon name="person" class="location"></ion-icon>
+        </ion-col>
+        <ion-col size="7" class="setting-details">
+          <h5>Location</h5>
+        </ion-col>
+        <ion-col size="3" class="icon-always">
+          <ion-icon name="arrow-forward" class="arrow-forward" (click)="location()"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mt-21" *ngIf="platform.is('android')">
+        <ion-col size="2" class="icon">
+          <ion-icon name="camera" class="camera"></ion-icon>
+        </ion-col>
+        <ion-col size="8" class="setting-details">
+          <h5>Camera</h5>
+        </ion-col>
+        <ion-col size="2" class="icon">
+          <ion-toggle [(ngModel)]="cameraPermission" (ionChange)="toggleCameraPermission()"></ion-toggle>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mt-21">
+        <ion-col size="2" class="icon">
+          <ion-icon name="log-out-outline" class="logout"></ion-icon>
+        </ion-col>
+        <ion-col size="10" class="setting-details">
+          <h5 class="custom-text-color" (click)="logout()">Logout</h5>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>

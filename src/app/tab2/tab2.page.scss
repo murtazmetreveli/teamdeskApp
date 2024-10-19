@@ -1,0 +1,87 @@
+ion-content {
+  .title {
+    ion-col {
+      h5 {
+        padding-top: 1.5rem;
+        color: var(--ion-text-green);
+
+      }
+    }
+  }
+
+  ion-grid {
+    margin-top: -30px;
+  }
+
+  .collection-details {
+    ion-col {
+      h2 {
+        // font-size:12.67pt !important;
+        // color:var(--ion-font-gray-dark);
+        font-size: 0.850rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      span {
+        color: var(--ion-font-gray-dark);
+        font-size: 0.850rem;
+      }
+    }
+  }
+
+  .upload-section {
+    margin-top: 10%;
+    ;
+
+    ion-icon {
+      color: var(--ion-font-gray-dark);
+      height: 55pt;
+      width: 55pt;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    .route {
+      border-radius: 50%;
+      width: fit-content;
+      background: var(--ion-light-gray);
+      height: 198px;
+      width: 198px;
+      white-space: pre;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+
+      // ion-img{
+      //   font-size: 12.67pt;
+      //   color: var(--ion-font-gray-dark);
+      //   white-space: pre;
+      // }
+      ion-img {
+        max-width: 100%;
+        /* Ensure the image doesn't exceed the container */
+        max-height: 100%;
+        object-fit: cover;
+        /* Ensure the image doesn't exceed the container */
+      }
+    }
+  }
+
+  ion-button {
+    width: 50% !important;
+
+  }
+
+  .done {
+    margin-top: 30px;
+  }
+}

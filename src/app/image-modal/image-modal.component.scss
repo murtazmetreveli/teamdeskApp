@@ -1,0 +1,51 @@
+.close-button {
+    --color: var(--ion-text-green);
+    --border-color: var(--ion-text-color) !important;
+    /* Adjust the color as needed */
+}
+
+ion-title {
+    color:var(--ion-text-color);
+    font-size: 16px;
+    text-transform: uppercase !important;
+}
+
+::ng-deep {
+    
+    ion-modal {
+        --width: fit-content;
+        --min-width: 100%;
+        --border-radius: 6px;
+              ion-content {
+          
+                background-image: url("/assets/images/cover-dark.jpg") !important;
+                background-repeat: no-repeat;
+                background-position: center;
+              
+              
+              }
+              
+         
+            ion-toolbar, ion-content{
+                --background: var(--app-bg-color) !important;
+              }
+        }
+    
+
+    ion-modal h1 {
+        margin: 20px 20px 10px 20px;
+    }
+
+    /* image-modal.component.scss */
+
+
+    .custom-image {
+        max-width: 100%;
+        /* Set the maximum width as needed */
+        max-height: 100vh;
+        /* Set the maximum height as needed */
+        width: auto;
+        height: -webkit-fill-available;
+    }
+
+}

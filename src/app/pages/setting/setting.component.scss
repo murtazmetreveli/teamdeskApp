@@ -1,0 +1,118 @@
+ion-content {
+  .setting {
+    h1 {
+      color: var(--ion-text-green);
+      font-weight: normal;
+      font-size: 23.33pt;
+
+    }
+  }
+
+  ion-grid {
+    margin-top: -30px;
+  }
+
+  .setting-section {
+    .icon-notification {
+      background: #FF4F00;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    .integrations {
+      background: #4D15F8;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    .location {
+      background: #FFB53A;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    .photo {
+      background: #72C071;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    .camera {
+      background: #DBDBDB;
+      color: #000;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    .logout {
+      background: var(--ion-text-green);
+      color: #f6f4f4;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    span {
+      font-size: 10.67pt;
+      color: var(--ion-font-gray-dark);
+    }
+
+    h5 {
+      font-size: 16pt;
+      color: var(--ion-text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    .custom-text-color {
+      color: var(--ion-text-green);
+    }
+
+    .setting-details {
+      align-self: center;
+    }
+
+    .icon {
+      // margin-top: 21pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .person {
+        background: #157EF8;
+        padding: 9px;
+        border-radius: 10px;
+      }
+    }
+
+    .arrow-forward {
+      // height: 9pt;
+      // width: 5pt;
+      color: var(--ion-gray-icon-color);
+    }
+
+    ion-toggle {
+      // --handle-background-checked:var(--ion-text-green);
+      // --handle-background: var(--ion-text-color);
+      --handle-background: var(--ion-text-green);
+      // --handle-background-checked:var(--ion-text-green);
+      --handle-background-checked: var(--ion-text-color);
+      --track-background-checked: var(--ion-text-color);
+    }
+  }
+
+  .mt-21 {
+    margin-top: 21pt;
+  }
+
+  .icon-always {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+
+
+}

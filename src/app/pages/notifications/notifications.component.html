@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+
+  <app-sub-header [headerObj]="headerData"> </app-sub-header>
+</ion-header>
+<ion-content class="ion-padding notification" [fullscreen]="false">
+
+<ion-row class="message" *ngFor="let n of todayNotification| keyvalue">
+  <ion-col size="12">
+    <span class="day">
+      {{ n.key }}
+    </span>
+  </ion-col>
+  <ng-container *ngFor="let item of isArray(n?.value);">
+    <ion-col size="10" class="message-text mtb-27">
+      <ion-text>{{ item?.message }}</ion-text>
+    </ion-col>
+    <ion-col size="2" class="ion-flex mtb-27 ion-align-self-center">
+      <span class="time">{{ item?.created_at | date:'HH:mm' }}</span>
+    </ion-col>
+  </ng-container>
+</ion-row>
+<ion-row class="message" *ngFor="let n of yesterdayNotification| keyvalue">
+  <ion-col size="12">
+    <span class="day">
+      {{ n.key }}
+    </span>
+  </ion-col>
+  <ng-container *ngFor="let item of isArray(n?.value);">
+    <ion-col size="10" class="message-text mtb-27">
+      <ion-text>{{ item?.message }}</ion-text>
+    </ion-col>
+    <ion-col size="2" class="ion-flex mtb-27 ion-align-self-center">
+      <span class="time">{{ item?.created_at | date:'HH:mm' }}</span>
+    </ion-col>
+  </ng-container>
+</ion-row>
+
+  <ion-row class="message" *ngFor="let n of notification">
+    <ion-col size="12">
+      <span class="day">
+        {{ n.key }}
+      </span>
+    </ion-col>
+    <ng-container *ngFor="let item of isArray(n?.value);">
+      <ion-col size="10" class="message-text mtb-27">
+        <ion-text>{{ item?.message }}</ion-text>
+      </ion-col>
+      <ion-col size="2" class="ion-flex mtb-27 ion-align-self-center">
+        <span class="time">{{ item?.created_at | date:'HH:mm' }}</span>
+      </ion-col>
+    </ng-container>
+  </ion-row>
+  <!-- <img src="assets/icon/arrow.png" />  -->
+
+  <!-- <swiper-slide>
+
+
+    </swiper-slide> -->
+
+</ion-content>

@@ -1,0 +1,71 @@
+<ion-content class="ion-padding upload" [fullscreen]="false">
+  <app-sub-header [headerObj]="headerData"> </app-sub-header>
+  <ion-grid>
+    <ion-row class="title">
+      <ion-col size="12" class="ion-text-center">
+        <h5>COLLECTION ID:{{ collectionId }}</h5> <!-- 2498 -->
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="collection-details" *ngIf="allData">
+      <ion-col size="6">
+        <h2 class="text-title">Collection Point: </h2>
+      </ion-col>
+      <ion-col size="6">
+        <span class="text-title">{{ PracticeName }}</span>
+      </ion-col>
+
+      <ion-col size="6">
+        <h2 class="text-title">Driver: </h2>
+      </ion-col>
+      <ion-col size="6">
+        <span class="text-title">{{ allData['Driver'] || '' }}</span>
+      </ion-col>
+
+
+      <ion-col size="6">
+        <h2 class="text-title">Collection Status: </h2>
+      </ion-col>
+      <ion-col size="6">
+        <span class="text-title">{{ allData['Status'] || '' }}</span>
+      </ion-col>
+
+      <ion-col size="6">
+        <h2 class="text-title">Date & Time: </h2>
+      </ion-col>
+      <ion-col size="6">
+        <span
+          class="text-title">{{ allData['Date/Time Collected'] || '' }}</span>
+      </ion-col>
+
+      <ion-col size="6">
+        <h2 class="text-title">Location:</h2>
+      </ion-col>
+      <ion-col size="6">
+        <span
+          class="text-title">{{ allData['Location'] || '' }}</span>
+      </ion-col>
+
+      <ion-col size="6">
+        <h2 class="text-title">Details:</h2>
+      </ion-col>
+      <ion-col size="6">
+        <span class="text-title">{{ allData['Details'] || '' }}</span>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="upload-section">
+      <ion-col class="flex " size="12" *ngIf="photo">
+        <div class="route" [ngStyle]="{'background-image': 'url(' + photo + ')'}" (click)="openImageModal(photo)">
+
+        </div>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button class="done" (click)="done()">Done</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

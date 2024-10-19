@@ -1,0 +1,118 @@
+/* Define the modal's wrapper to center it on the screen */
+
+
+
+.sentbox {
+  
+  .sentbox-details {
+    border-bottom: 2px solid #4a5054;
+    padding: 2px 0px;
+    h5 {
+      font-size: 17pt;
+      color: var(--ion-text-green);
+      font-weight: 700;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    ion-text {
+      font-size: 15pt;
+      color: var(--ion-color-danger-contrast);
+    }
+
+    p {
+      font-size: 13pt;
+      color: var(--ion-text-color);
+      margin: 6pt 0 0 0;
+      padding: 0;
+    } 
+    ion-img{
+      border-radius: 5px;
+    }
+  }
+
+  ::ng-deep .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    /* You can adjust the z-index as needed */
+    overflow: visible;
+  }
+
+
+}
+
+::ng-deep ion-grid {
+  max-height: 100% !important;
+  overflow-y: auto !important;
+}
+
+ion-content {
+  padding-top: 50px;
+  /* Adjust this value to match the height of your sticky header */
+  overflow: auto;
+}
+
+ion-header {
+  // background: var(--app-head-color);
+  box-shadow: none;
+}
+
+::ng-deep .spinner {
+  --backdrop-opacity: 0;
+  box-shadow: none !important;
+  --spinner-color: var(--ion-text-green);
+  --height: 80px !important;
+  --width: 80px !important;
+}
+
+::ng-deep .loading-wrapper.sc-ion-loading-md,
+.sc-ion-loading-ios {
+  --background: transparent !important;
+  -webkit-box-shadow: none !important;
+
+
+}
+
+ion-segment {
+  width: 100%;
+  height: 50px;
+}
+
+ion-searchbar {
+  --placeholder-color: var(--ion-search-placeholder-color);
+  --border-radius: 10px;
+  --box-shadow: none;
+  padding: 0 33pt;
+
+}
+
+ion-segment-button {
+  --background-checked: var(--ion-text-green);
+  --color-checked: #fff;
+  --indicator-color: transparent;
+  --border-color: var(--ion-text-green);
+  font-size: 20px;
+  font-weight: 500;
+
+}
+::ng-deep{
+
+  ion-modal {
+    --height: 50%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  ion-modal::part(backdrop) {
+    // background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: transparent;
+    --color: white;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Courier Control",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://couriercontrol.app/php-test-api"
+    }
+  ]
+} 

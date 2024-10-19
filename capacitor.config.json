@@ -1,0 +1,23 @@
+{
+  "appId": "com.courier.control",
+  "appName": "Courier Control",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+     "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "linear-gradient(180deg, rgba(50, 70, 80, 0.9) 0%, rgb(13, 16, 27) 100%)",
+      "iosSpinnerStyle": "small",
+      "splashFullScreen": true,
+      "layoutName": "COURIER CONTROL",
+      "launchShowDuration": 3000,
+      "splashImmersive":true
+
+    }
+  }
+}

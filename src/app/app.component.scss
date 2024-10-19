@@ -1,0 +1,15 @@
+::ng-deep .spinner {
+  --backdrop-opacity: 0;
+  box-shadow: none !important;
+  --spinner-color: var(--ion-text-green);
+  --height: 80px !important;
+  --width: 80px !important;
+}
+
+::ng-deep .loading-wrapper.sc-ion-loading-md,
+.sc-ion-loading-ios {
+  --background: transparent !important;
+  -webkit-box-shadow: none !important;
+
+
+}

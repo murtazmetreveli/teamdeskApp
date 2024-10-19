@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border" mode="md">
+  <app-sub-header [headerObj]="headerData" class="sticky-header" [outBox]="true">
+  </app-sub-header>
+  <ion-col size="12">
+    <ion-searchbar [(ngModel)]="searchQuery" (keyup)="onSearch()"></ion-searchbar>
+  </ion-col>
+</ion-header>
+<ion-content class="ion-padding outbox" [fullscreen]="false" [scrollEvents]="true">
+  <ion-header class="ion-no-border"></ion-header>
+  <ion-segment mode="ios" [value]="selectedSegment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button [value]="0">
+      <ion-label>Lab-Check-In</ion-label>
+    </ion-segment-button>
+    <ion-segment-button [value]="1">
+      <ion-label>Collection</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ng-container>
+    <swiper-container #swiper (swiperslidechange)="slideChanged()">
+      <swiper-slide>
+        <ion-grid *ngIf="dropOffData.length==0">
+          <ion-row class="record-details">
+            <ion-col size="12" class="ion-margin-top ion-margin-bottom">
+              <p class="ion-text-center">No Record Found</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row class="outbox-details" *ngFor="let d of (searchQuery ? filterDropOFFData : dropOffData)">
+            <ion-col size="12" class="ion-margin-top ion-margin-bottom">
+              <h5>{{ d.practiceId }}</h5>
+              <p>{{ d.details || 'no additional details' }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-grid *ngIf="collectionData.length==0">
+          <ion-row class="record-details">
+            <ion-col size="12" class="ion-margin-top ion-margin-bottom">
+              <p class="ion-text-center">No Record Found</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row class="outbox-details" *ngFor="let d of (searchQuery ? filteredCollectionData : collectionData)">
+            <ion-col size="10" class="ion-margin-top ion-margin-bottom">
+              <h5>{{ d.practiceId }}</h5>
+              <ion-text>{{ d.Status }}</ion-text>
+              <p>{{ d.details || 'no additional details' }}</p>
+            </ion-col>
+            <!-- <ion-col size="2">
+              <img width="50" height="50" [src]="_DomSanitizationService.bypassSecurityTrustUrl(d.image)"
+                onerror="this.src='assets/images/no_image.png'" />
+            </ion-col> -->
+          </ion-row>
+        </ion-grid>
+      </swiper-slide>
+    </swiper-container>
+  </ng-container>
+
+
+
+</ion-content>

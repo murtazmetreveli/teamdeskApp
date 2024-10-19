@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <app-sub-header [headerObj]="headerData"> </app-sub-header>
+</ion-header>
+<ion-content class="ion-padding enter-details" [ngClass]="{'pt-28':!dropOff}" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center" *ngIf="!dropOff">
+        <ion-text class="text-title">Enter collection details below</ion-text>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="enter-from">
+        <ion-textarea fill="outline" placeholder="Box was unlocked" [(ngModel)]="details"
+          (input)="capitalizeFirstLetter()">
+
+        </ion-textarea>
+
+
+      </ion-col>
+      <ion-col size=" 12" class="enter-from ion-text-center">
+
+        <ion-button (click)="done()" [disabled]="buttonDisabled">Done </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

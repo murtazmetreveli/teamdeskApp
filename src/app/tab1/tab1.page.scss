@@ -1,0 +1,60 @@
+ion-content ion-grid {
+  padding: 0;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.center-section {
+  margin-top: 10px;
+  margin-bottom: 49px;
+  text-align: center;
+}
+
+.center-section ion-text {
+  font-size: 16.67pt;
+  color: var(--ion-font-gray-dark);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.route {
+  border-radius: 50%;
+  width: 198px;
+  height: 198px;
+  background: var(--ion-text-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.route ion-text {
+  font-size: 27.33pt;
+  color: var(--ion-color-primary-contrast);
+}
+
+.btn-out-liner {
+  margin-top: 49px;
+  --color: var(--ion-text-green) !important;
+}
+
+/* Apply styles to the Log Out button */
+ion-button.btn-out-liner {
+  --border-color: var(--ion-text-green);
+  --color: var(--ion-text-green);
+  --background: transparent;
+  border: none !important;
+
+}
+
+.btn-login {
+  border: none !important;
+}
+
+/* Additional global styles for your app */
+/* Customize these styles according to your design requirements */

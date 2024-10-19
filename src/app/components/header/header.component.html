@@ -1,0 +1,11 @@
+<ion-header class="ion-no-border" [translucent]="true" mode="md">
+  <!-- <ion-grid> -->
+  <ion-row class="banner" *ngIf="headerObj">
+    <ion-col size="9">
+      <h1 [innerHTML]="headerObj?.main_title"></h1>
+      <p>{{ headerObj?.title }}</p>
+      <h2>{{ headerObj?.sub_titile }}</h2>
+    </ion-col>
+  </ion-row>
+  <!-- </ion-grid> -->
+</ion-header>

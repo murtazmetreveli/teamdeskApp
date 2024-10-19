@@ -1,0 +1,155 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import "theme/variables.scss";
+
+html {
+  --ion-font-family: "Roboto",
+    "Helvetica Neue",
+    sans-serif;
+
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 0 !important;
+  background: var(--app-bg-color);
+}
+
+body {
+  background: none;
+  position: relative;
+  min-height: 100vh;
+  z-index: 9999;
+  background-image: url("./assets/images/cover-dark.jpg") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: transparent;
+  background-image: url('./assets/images/pattern-dark.png');
+  background-size: 4.6875rem;
+  background-repeat: repeat;
+  background-attachment: initial;
+  z-index: -5;
+}
+
+ion-content {
+  --background: none !important;
+
+
+}
+
+ion-tab-bar {
+  --background: var(--app-bg-color, #fff);
+  border-top: 1px solid var(--border-tab);
+}
+
+ion-button {
+  --background: none;
+  --color: var(--ion-text-green);
+  --background-hover: var(--ion-text-green);
+  --border-color: var(--ion-text-green) !important;
+  // border-width: 1px;
+  --border-radius: 8px;
+  --border-width: 1px;
+  --border-style: solid;
+}
+
+
+.btn-out-liner {
+  --background: none !important;
+  --color: var(--ion-font-color-blue);
+
+}
+
+.btn-white {
+  --background: var(--ion-background-color) !important;
+  --color: var(--ion-text-color-sky);
+}
+
+ion-input {
+  --border-color: var(--ion-input-border-color);
+  border: 1px solid var(--ion-input-border-color);
+  --padding-start: 15px !important;
+  --placeholder-color: var(--ion-font-gray-dark) !important;
+  font-size: 20px !important;
+}
+
+ion-toggle {
+  --track-background: #E5E9F2;
+}
+
+.text-title {
+  color: var(--ion-text-color);
+  font-size: 12.67pt;
+}
+
+
+swiper-container {
+  --swiper-pagination-color: #3cd2a5;
+  width: 100%;
+  height: 100%;
+}
+
+// .ion-app {
+//   --safe-area-inset-top: env(safe-area-inset-top);
+//   --safe-area-inset-bottom: env(safe-area-inset-bottom);
+//   height: calc(100% + (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)));
+// }
+
+// body {
+//   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+// }
+
+.my-custom-class,
+.custom-alert {
+  .alert-header {
+    color: black !important;
+  }
+
+  .alert-subheader {
+    color: black !important;
+  }
+
+  .alert-message {
+    color: black !important;
+  }
+}

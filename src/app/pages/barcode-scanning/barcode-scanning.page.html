@@ -1,0 +1,31 @@
+<ion-content class="ion-padding barcode-scanner" [fullscreen]="true">
+  <app-sub-header [headerObj]="headerData"> </app-sub-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ng-container *ngIf="objCheck(barcodes)">
+          <ion-button expand="block" (click)="scan()" [disabled]="!isSupported">Scan</ion-button>
+        </ng-container>
+        <ion-modal mode="md" [isOpen]="isModalOpen">
+          <ng-template>
+            <ion-toolbar class="ion-text-center">
+              <ion-title class="title">Select Collection Status</ion-title>
+            </ion-toolbar>
+            <ion-list lines="inset">
+              <ion-item class="ion-text-center" *ngFor="let collect of collectionDetails"
+                (click)="collectionClick(collect)">
+                <ion-label>
+                  {{ collect?.name }}
+                </ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button class="close" (click)="setOpen(false)">Close</ion-button>
+          </ng-template>
+        </ion-modal>
+        <ng-container *ngFor="let barcode of barcodes">
+        </ng-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

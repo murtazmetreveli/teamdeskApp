@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "87562420495",
+    "project_id": "courier-control-591a7",
+    "storage_bucket": "courier-control-591a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87562420495:android:7cb66e673199f1a4a5be7a",
+        "android_client_info": {
+          "package_name": "com.courier.control"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7chiGR2njMcJ7PiaMe35RbNTBme4eETQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
