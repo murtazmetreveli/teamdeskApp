@@ -8,12 +8,6 @@ use_frameworks!
 # Requires CocoaPods 1.6 or newer
 install! 'cocoapods', :disable_input_output_paths => true
 
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://cdn.cocoapods.org/'
-
-#  'Firebase/Analytics'
-pod 'Firebase/Analytics'
-
 
 def capacitor_pods
   pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
